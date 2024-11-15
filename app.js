@@ -1,11 +1,10 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('Hello, Azure!');
-});
+app.use(cors());
 
-app.get('/hello', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hello, Azure! This static react site and the Nodejs server this message is being pulled from were created using the Azure portal');
 });
 
